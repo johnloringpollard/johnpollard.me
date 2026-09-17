@@ -21,12 +21,24 @@ The portrait is in `assets/`: the page uses the optimized WebP, and the full-res
 GitHub Pages publishes the root of the `main` branch. Commit and push changes to update the site:
 
 ```sh
-git add index.html assets
+git add index.html assets robots.txt sitemap.xml
 git commit -m "Update personal site"
 git push
 ```
 
 `CNAME` sets the custom domain to `johnpollard.me`. `.nojekyll` tells Pages to serve the static files directly.
+
+## Search and sharing
+
+The page includes a descriptive title and meta description, an HTTPS canonical URL, Open Graph and X preview metadata, and JSON-LD describing the website, profile page, and John Pollard. The profile's structured data matches the visible biography and links to the supplied LinkedIn and X profiles.
+
+`robots.txt` allows crawling and points to `sitemap.xml`. The sitemap lists the canonical homepage. Update its `lastmod` date when making a meaningful change to the page. Keep the title, description, and structured data consistent when updating the biography.
+
+The favicon is a crawlable SVG in `assets/favicon.svg`. The visible portrait uses an optimized WebP with descriptive alternative text and explicit dimensions.
+
+Google Search Console ownership verification and sitemap submission are separate account steps; no verification token or indexing request is included in this repository. Once verified, submit `https://johnpollard.me/sitemap.xml` in Search Console.
+
+References: [Google's SEO guide](https://developers.google.com/search/docs/fundamentals/seo-starter-guide), [profile structured data](https://developers.google.com/search/docs/appearance/structured-data/profile-page), and [sitemap guidance](https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap).
 
 ## Domain setup
 
